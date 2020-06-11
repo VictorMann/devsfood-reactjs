@@ -9,7 +9,9 @@ background: red;
 
 export const Menu = styled.div`
 display: flex;
-background: green;
+flex-direction: column;
+justify-content: center;
+background: #136713;
 width: 80px;
 `;
 
