@@ -8,6 +8,7 @@ import HomeScreen from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 
 import MenuItem from './components/MenuItem';
+import PrivateRoute from './components/PrivateRoute';
 
 
 export default () => {
@@ -26,9 +27,15 @@ export default () => {
                         <Route exact path="/">
                             <HomeScreen />
                         </Route>
-                        <Route path="/tela2/:nome">
+                        <PrivateRoute path="/orders">
+                            <h1>Pedidos</h1>
+                        </PrivateRoute>
+                        <PrivateRoute path="/profile">
+                            <h1>Perfil</h1>
+                        </PrivateRoute>
+                        <PrivateRoute path="/tela2/:nome">
                             <Tela2Screen />
-                        </Route>
+                        </PrivateRoute>
                     </Switch>
                 </PageBody>
             </Container>
