@@ -21,4 +21,5 @@ display: flex;
 flex: 1;
 background: #00980d url(/assets/bg.png);
 background-size: 120px;
+padding: 1.5em;
 `;
