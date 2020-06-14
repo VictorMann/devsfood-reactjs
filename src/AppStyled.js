@@ -19,5 +19,6 @@ width: 80px;
 export const PageBody = styled.div`
 display: flex;
 flex: 1;
-background: blue;
+background: #00980d url(/assets/bg.png);
+background-size: 120px;
 `;

@@ -9,7 +9,7 @@ export default ({children, ...rest}) => {
 
     if (!token) {
         history.push('/login');
-        return;
+        return 0;
     }
 
     return (
