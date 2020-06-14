@@ -24,9 +24,13 @@ border: none;
 cursor: pointer;
 transition: .2s ease;
 
+&:hover {
+    background-color: white;
+}
+
 &.active {
-    padding-right: 1em;
     width: 250px;
+    padding-right: 1em;
     background-color: white;
     cursor: initial;
 }
