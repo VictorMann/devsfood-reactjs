@@ -12,7 +12,7 @@ export default () => {
     const [headerSearch, setHeaderSearch] = useState('');
     const [categories, setCategories] = useState([]);
 
-    
+    const [activeCategory, setActiveCategory] = useState(0);
 
     useEffect(() => {
         const getCategories = async () => {
@@ -21,6 +21,10 @@ export default () => {
         };
         getCategories();
     }, []);
+
+    useEffect(() => {
+
+    }, [activeCategory]);
 
     return (
     <>
@@ -31,9 +35,22 @@ export default () => {
             
             {categories.length &&
                 <CategoryArea>
-                    Selecione uma categoria
+                    <h4 className="category-title">Selecione uma categoria</h4>
                     <CategoryList>
-                        <CategoryItem title="Todas as categorias" image="food-and-restaurant.png" />
+                        <CategoryItem 
+                            data={{
+                                id: 0,
+                                title: 'Todas as categorias',
+                                image: '/assets/food-and-restaurant.png'}}
+                            activeCategory={activeCategory}
+                            setActiveCategory={setActiveCategory} />
+                        {categories.map((item, k) =>
+                            <CategoryItem 
+                                key={k} 
+                                data={item}
+                                activeCategory={activeCategory}
+                                setActiveCategory={setActiveCategory} />
+                        )}
                     </CategoryList>
                 </CategoryArea>
             }

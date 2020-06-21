@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container } from './styled';
+import { Container, CategoryImage } from './styled';
 
-export default () => {
+export default ({data, activeCategory, setActiveCategory}) => {
     return (
-        <Container>
-            ...
+        <Container 
+            className={data.id == activeCategory ? 'active' : ''}
+            onClick={() => setActiveCategory(data.id)}>
+            
+            <CategoryImage src={data.image} />
         </Container>
     );
 }
