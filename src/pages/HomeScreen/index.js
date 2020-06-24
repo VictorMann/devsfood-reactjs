@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { Container, CategoryArea, CategoryList } from './styled';
+import ReactTooltip from 'react-tooltip';
 
 import api from '../../api';
 
@@ -18,6 +19,9 @@ export default () => {
         const getCategories = async () => {
             const cat = await api.getCategories();
             setCategories(cat);
+
+            // realiza um scan novamente para processar os tooltips
+            ReactTooltip.rebuild();
         };
         getCategories();
     }, []);
@@ -40,7 +44,7 @@ export default () => {
                         <CategoryItem 
                             data={{
                                 id: 0,
-                                title: 'Todas as categorias',
+                                name: 'Todas as categorias',
                                 image: '/assets/food-and-restaurant.png'}}
                             activeCategory={activeCategory}
                             setActiveCategory={setActiveCategory} />
