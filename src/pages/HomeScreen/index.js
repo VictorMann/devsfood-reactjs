@@ -33,7 +33,7 @@ export default () => {
                 search={headerSearch} 
                 onSearch={setHeaderSearch} />
             
-            {categories.length &&
+            {categories.length > 0 &&
                 <CategoryArea>
                     <h4 className="category-title">Selecione uma categoria</h4>
                     <CategoryList>
