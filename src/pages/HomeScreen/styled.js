@@ -18,3 +18,6 @@ display: flex;
     margin-right: .75em;
 }
 `;
+
+export const ProductArea = styled.div``;
+export const ProductList = styled.div``;

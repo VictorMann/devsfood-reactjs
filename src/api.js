@@ -4,6 +4,9 @@ export default {
     async getCategories() { 
         return await this.handleFetch(BASE + '/categories');
     },
+    async getProducts() {
+        return await this.handleFetch(BASE + '/products');
+    },
     async handleFetch(...args) {
         let res = await fetch(...args).catch();
         res = res.ok ? await res.json() : {error: res.statusText};
