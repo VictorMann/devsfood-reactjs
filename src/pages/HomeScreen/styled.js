@@ -19,5 +19,12 @@ display: flex;
 }
 `;
 
-export const ProductArea = styled.div``;
-export const ProductList = styled.div``;
+export const ProductArea = styled.div`
+margin-top: 2em;
+margin-bottom: 2em;
+`;
+export const ProductList = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
+`;
