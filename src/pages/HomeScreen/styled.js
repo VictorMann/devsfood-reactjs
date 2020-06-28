@@ -28,3 +28,19 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-gap: 10px;
 `;
+
+export const ProductPaginationArea = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin-top: 20px;
+`;
+
+
+export const ProductPaginationItem = styled.div`
+background: ${props => props.current == props.active ? '#bbb' : 'white'};
+padding: 5px 10px;
+border-radius: 5px;
+box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+margin-right: .5em;
+cursor: pointer;
+`;

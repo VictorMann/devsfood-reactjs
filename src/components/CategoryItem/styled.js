@@ -4,7 +4,7 @@ export const Container = styled.div`
 width: 3em;
 height: 3em;
 background-color: rgba(255, 255, 255, .5);
-padding: .75em;
+padding: .5em;
 border-radius: 10px;
 cursor: pointer;
 transition: background-color .2s ease;
