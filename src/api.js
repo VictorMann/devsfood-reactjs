@@ -4,8 +4,16 @@ export default {
     async getCategories() { 
         return await this.handleFetch(BASE + '/categories');
     },
-    async getProducts() {
-        return await this.handleFetch(BASE + '/products');
+    async getProducts(category, page, search) {
+        let fields = {};
+
+        if (category != 0) fields.category = category;
+        if (page > 0) fields.page = page;
+        if (search.trim()) fields.search = search.trim();
+
+        let queryString = new URLSearchParams(fields).toString();
+
+        return await this.handleFetch(BASE + '/products?' + queryString);
     },
     async handleFetch(...args) {
         let res = await fetch(...args).catch();
