@@ -25,7 +25,7 @@ transition: opacity .2s ease;
 
 export const ModalBody = styled.div`
 max-height: 90vh;
-max-width: 90vh;
+max-width: 90vw;
 min-height: 200px;
 min-width: 200px;
 background: white;
