@@ -21,6 +21,10 @@ transition: opacity .2s ease;
     visibility: visible;
     opacity: 1;
 }
+&.active > * {
+    opacity: 1;
+    margin-top: 0;
+}
 `;
 
 export const ModalBody = styled.div`
@@ -32,4 +36,10 @@ background: white;
 border-radius: 20px;
 box-shadow: 0 0 50px #000;
 overflow: auto;
+opacity: 0;
+margin-top: -50px;
+
+transition-property: opacity, margin-top;
+transition-duration: .5s;
+transition-timing-function: ease;
 `;
